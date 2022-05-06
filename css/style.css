@@ -22,7 +22,18 @@
   font-display: swap;
 }
 
+/*бордер бокс на всю страницу*/
+*, ::after, ::before {
+box-sizing: inherit;
+} 
 
+html {
+  box-sizing: border-box;
+}
+
+.class {
+  box-sizing: content-box;
+}
 
 /*общий шрифт*/
 body {
