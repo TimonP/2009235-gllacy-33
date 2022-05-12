@@ -78,19 +78,21 @@ body {
   text-rendering: optimizelegibility;
   /*min-width: 1366px; убрать в конце*/
   background-color: var(--light);
-  transition: background-color 0.6s;
 }
 
 .pink {
   background-color: var(--light);
+  transition: background-color 0.6s;
 }
 
 .blue {
   background-color: var(--blue);
+  transition: background-color 0.6s;
 }
 
 .yellow {
   background-color: var(--yellow);
+  transition: background-color 0.6s;
 }
 
 .container {
@@ -140,6 +142,30 @@ body {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+}
+
+.contact-phone {
+  font: inherit;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-phone:hover {
+  color: var(--extra-bright);
+}
+
+.contact-phone:active {
+  color: var(--extra-bright);
+  opacity: 0.6;
+}
+
+.contact-phone:focus {
+  color: var(--extra-bright);
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 /*кнопки*/
@@ -223,29 +249,77 @@ a.navigation-link {
   color: var(--extra-light);
 }
 
+.navigation address {
+  margin-right: 12px;
+  display: grid;
+  align-items: center;
+}
+
+.navigation .contact-phone {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 6px;
+}
+
 .navigation-user-menu {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.navigation-user-menu .navigation-item {
+  margin: 12px 8px;
+}
+
+.navigation-link-icon {
+  min-width: 18px;
+  min-height: 18px;
+  display: inline-block;
+  position: relative;
+}
+
+.navigation-link-icon + span {
+  margin-left: 6px;
+}
+
+.navigation-link-icon svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: var(--extra-dark);
 }
 
 button.navigation-link {
   padding: 6px 16px;
   font-size: 14px;
   background-color: rgba(252, 252, 252, 0.3);
+  display: flex;
+  align-items: center;
+}
+
+button.navigation-link[aria-label] {
+  padding: 7px;
+  border-radius: 50%;
 }
 
 a.navigation-link:hover,
 button.navigation-link:hover {
   background-color: rgba(252, 252, 252, 0.5);
+  color: var(--extra-dark);
 }
 
 a.navigation-link:focus,
 button.navigation-link:focus {
   background-color: rgba(252, 252, 252, 0.5);
-  box-shadow: inset 0 0 0 2px #2D3440;
+  box-shadow: inset 0 0 0 2px var(--extra-dark);
+  color: var(--extra-dark);
 }
 
 a.navigation-link:active,
 button.navigation-link:active {
   background-color: var(--extra-light);
+  color: var(--extra-dark);
 }
