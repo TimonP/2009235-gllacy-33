@@ -45,6 +45,15 @@
 									</svg>
 								</span>
 							</button>
+							<div class="popover search-popover popover-close">
+								<form class="search" action="https://echo.htmlacademy.ru/" method="post">
+									<label class="visually-hidden" for="find-product">Поиск товара</label>
+									<input class="input" type="search" name="find-product" id="find-product" required autofocus autocomplete="off" placeholder="Поиск по сайту">
+									<button class="delete-button search-reset-button" type="reset">
+										<span class="visually-hidden">Сброс введенноготекста</span>
+									</button>			
+								</form>	
+							</div>
 						</li>
 						<li class="navigation-item">
 							<button class="navigation-link" type="button">
@@ -53,7 +62,7 @@
 										<path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M9.2.87c0-.36.3-.66.68-.66h3a2.17 2.17 0 0 1 2.16 2.17v10.5a2.17 2.17 0 0 1-2.16 2.16h-3a.67.67 0 0 1 0-1.33h3a.83.83 0 0 0 .83-.84V2.38a.83.83 0 0 0-.84-.83h-3a.67.67 0 0 1-.66-.67ZM5.66 3.4a.67.67 0 0 1 .95 0l3.74 3.75a.66.66 0 0 1 0 .95L6.6 11.85a.67.67 0 1 1-.95-.95l2.62-2.6H.87a.67.67 0 0 1 0-1.34h7.4L5.65 4.35a.67.67 0 0 1 0-.95Z"/>
 									</svg>
 								</span>
-								<span >Вход</span>
+								<span>Вход</span>
 							</button>
 						</li>
 						<li class="navigation-item">
@@ -287,7 +296,6 @@
 					</div>
 				</section>
 
-
 				<section class="bonus-prises">
 					<h2 class="visually-hidden">Информация о новостном контенте</h2>
 					<div class="bonus-prises-wrapper">
@@ -296,16 +304,75 @@
 							<p class="h3">10 способов сервировки фруктовых щербетов к&nbsp;столу</p>
 						</a>
 
-						<div class="subscription">
-							<p class="p">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-							
-							<form  class="email" action="https://echo.htmlacademy.ru/" method="post">
-								<label class="visually-hidden" for="newsletter-email">Email</label>
-								<input class="input" type="email" name="newsletter-email" id="newsletter-email" placeholder="email@example.com" required autocomplete="on">
-								<button class="button pink-button" type="submit">Отправить</button>
-							</form>
+						<div class="subscription-wrapper">
+							<div class="subscription">
+								<p class="p">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+								
+								<form  class="email" action="https://echo.htmlacademy.ru/" method="post">
+									<label class="visually-hidden" for="newsletter-email">Email</label>
+									<input class="input" type="email" name="newsletter-email" id="newsletter-email" placeholder="email@example.com" required autocomplete="on">
+									<button class="button pink-button" type="submit">Отправить</button>
+								</form>
+							</div>
 						</div>
 					</div>		
+				</section>
+
+
+				<section class="delivery">
+					<div class="delivery-info">
+						<h2 class="h2">Доставка любимого мороженого на дом</h2>
+						<p class="p">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+					</div>
+
+					<form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+						<p class="p">Укажите адрес и дату доставки, и мы свяжемся с&nbsp;вами, чтобы подтвердить заказ.</p>
+
+						<div class="field-group field-group-date">
+							<span class="label wrapper-i">
+								<label class="label" for="delivery-date">Дата:</label>
+								<span class="tooltip">
+									<button class="dop-info" type="button" aria-labelledby="tooltip-label">
+											<span class="visually-hidden">Посмотреть дополнительную информацию</span>
+									</button>
+								</span>
+							</span>	
+							<input class="input" type="text" id="delivery-date" name="date" placeholder="01.04.2020" pattern="[0-3]{1}[0-9]{1}.[0-1]{1}[0-9]{1}.202[2-9]{1}">
+						</div>
+
+						<div class="field-group field-group-telephone">
+							<label class="label" for="delivery-phone">Телефон:</label>
+							<input class="input" type="tel" id="delivery-telephone" name="telephone" placeholder="+7 800 999-00-00" pattern="+7 [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+						</div>
+
+						<div class="field-group field-group-address">
+							<span class="label wrapper-i">
+								<label class="label" for="delivery-address">Адрес:</label>
+								<span class="tooltip">
+									<button class="dop-info" type="button" aria-labelledby="tooltip-label">
+											<span class="visually-hidden">Посмотреть дополнительную информацию</span>
+									</button>
+								</span>
+							</span>	
+							<input class="input" type="text" id="delivery-address" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
+						</div>
+
+						<button class="button pink-button" type="submit">Отправить</button>
+					</form>
+				</section>
+
+				<section class="feedback">
+					<h2 class="visually-hidden">Обратная связь</h2>
+					<div class="feedback-window">
+						<p class="p">Адрес главного офиса<br> и офлайн-магазина:</p>
+						<address class="address">наб. реки Карповки,<br> 5 лит П, Санкт-Петербург</address>
+						<p class="p">Для заказов по телефону:</p>
+						<address class="address">
+							<a class="contact-phone address" href="tel:+78128121212">+7 (812) 812-12-12</a>
+						</address>
+						<p class="p">(с 10 до 20 ежедневно)</p>
+						<button class="button pink-button" tupe="button">Форма обратной связи</button>
+					</div>
 				</section>
 			</main>
 
@@ -372,6 +439,34 @@
 					<p class="p">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
 				</div>
 			</footer>
+
+			<!-- Модальное окно -->
+			<div class="modal-container modal-container-close">
+				<div class="modal modal-feedback">
+					<h2 class="h3">Мы обязательно ответим вам!</h2>
+
+					<button class="close-window">
+						<span class="visually-hidden">Закрыть окно</span>
+						<svg fill="none" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M12.886 2.055a.667.667 0 0 0-.943-.943L6.999 6.056 2.055 1.112a.667.667 0 0 0-.943.943l4.944 4.944-4.944 4.944a.667.667 0 1 0 .943.943l4.944-4.944 4.944 4.944a.667.667 0 1 0 .943-.943L7.942 7l4.944-4.944Z"/>
+						</svg>
+					</button>
+
+
+					<form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+						<label class="visually-hidden" for="user-name">Ваше имя и фамилия</label>
+						<input class="input" type="text" id="user-name" name="name" placeholder="Имя и фамилия" autocomplete="off" required>
+						
+						<label class="visually-hidden" for="user-e-mail">Ваш e-mail:</label>
+						<input class="input" type="email" id="user-e-mail" name="e-mail" placeholder="email@example.com" autocomplete="off" required>
+
+						<label class="visually-hidden" for="user-message">Что нужно привезти:</label>
+						<textarea class="input" rows="6" id="user-message" name="message" placeholder="В свободной форме" autocomplete="off" required></textarea>
+						
+						<button class="button pink-button" type="submit">Отправить</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
