@@ -321,7 +321,7 @@ body {
   margin-bottom: 8px;
 }
 
-/*Убраить стили списка*/
+/*Убрать стили списка*/
 .navigation-main-menu,
 .navigation-user-menu,
 .social-list,
@@ -333,7 +333,9 @@ body {
 .slider-images,
 .bonus-prises-list,
 .products-list,
-.benefits-list {
+.benefits-list,
+.catalog-menu-popover-list,
+.auth-links-list {
   list-style: none;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -1480,7 +1482,7 @@ body {
   right: 0;
 }
 
-/*Поповеры*/
+/*----ПОПОВЕРЫ----*/
 .popover-close {
   display: none;
 }
@@ -1517,6 +1519,85 @@ body {
   background-size: 10px 10px;
 }
 
+/*Всплывающее меню какталога*/
+.navigation-main-menu .navigation-link:hover + .popover-close {
+  display: block;
+}
+
+.catalog-menu-popover {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 20px;
+  box-shadow: var(--shadow-medium);
+  width: max-content;
+  max-width: 250px;
+}
+
+.catalog-menu-popover b {
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+.catalog-menu-popover b::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--neutral);
+  margin-top: 11px;
+}
+
+.catalog-menu-popover-list {
+  margin: 6px 0 10px 0;
+}
+
+
+.catalog-menu-popover-link {
+  display: block;
+  padding: 6px 16px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.catalog-menu-popover-link span {
+  position: relative;
+  display: inherit;
+  z-index: 2;
+}
+
+.catalog-menu-popover-link::before {
+  content: " ";
+  position: absolute;
+  height: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+}
+
+.catalog-menu-popover-link-current {
+  color: var(--white);
+}
+
+.catalog-menu-popover-link-current::before {
+  background-color: var(--bright);
+}
+.catalog-menu-popover-link:hover,
+.catalog-menu-popover-link:active{
+  color: inherit;
+}
+.catalog-menu-popover-link:hover::before {
+  background-color: var(--pink-extra-light);
+  z-index: 1;
+}
+
+.catalog-menu-popover-link:active::before {
+  background-color: var(--pink-neutral);
+  z-index: 1;
+}
+
+
 /*Поповер поиска*/
 .search-popover {
   padding: 24px 16px;
@@ -1524,11 +1605,7 @@ body {
   width: 356px;
 }
 
-.search {
-  position: relative;
-}
-
-.search .input {
+.input[type="search"] {
   width: 100%;
   padding-right: 42px;
 }
@@ -1540,6 +1617,10 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.search-input-reset-button-wrapper {
+  position: relative;
 }
 
 .search-reset-button.delete-button {
@@ -1558,6 +1639,65 @@ body {
 .search-reset-button.delete-button:hover {
   opacity: 1;
 }
+
+/* Аутентификация пользователя*/
+.auth-user-popover {
+  min-width: 420px;
+  padding: 48px;
+  padding-bottom: 52px;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 16px;
+}
+
+.auth-user-popover .h3 {
+  margin-bottom: 16px;
+}
+
+.auth-user-popover .input:focus::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.auth-user-popover .button-with-links-wrapper {
+  margin-top: 16px;
+}
+
+.button-with-links-wrapper {
+  display: flex;
+}
+
+.button-with-links-wrapper .button {
+  align-self: flex-start;
+}
+
+.auth-links-list {
+  margin-left: 23px;
+}
+
+.auth-links-item {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.auth-links-item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.auth-links-link {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  text-underline-offset: 3.4px;
+  color: inherit;
+}
+
+
+/*Попер корзины*/
+
 
 /*
 .range-input::-webkit-inner-spin-button,

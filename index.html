@@ -22,7 +22,34 @@
 
 					<ul class="navigation-main-menu">
 						<li class="navigation-item">
-							<a  class="navigation-link navigation-link-current" href="catalog.html">Каталог</a>
+							<a  class="navigation-link navigation-link-current" href="#">Каталог</a>
+							<div class="popover popover-close">
+								<div class="catalog-menu-popover">
+									<b>Новинки</b>
+									<ul class="catalog-menu-popover-list">
+										<li class="catalog-menu-popover-item">
+											<a class="catalog-menu-popover-link" href="#">
+												<span>Сливочное</span>
+											</a>
+										</li>
+										<li class="catalog-menu-popover-item">
+											<a class="catalog-menu-popover-link catalog-menu-popover-link-current" href="catalog.html">
+												<span>Щербеты</span>
+											</a>
+										</li>
+										<li class="catalog-menu-popover-item">
+											<a class="catalog-menu-popover-link" href="#">
+												<span>Фруктовый лед</span>
+											</a>
+										</li>
+										<li class="catalog-menu-popover-item">
+											<a class="catalog-menu-popover-link" href="#">
+												<span>Мелорин</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</li>
 						<li class="navigation-item">
 							<a class="navigation-link" href="#">Доставка и оплата</a>
@@ -45,14 +72,16 @@
 									</svg>
 								</span>
 							</button>
-							<div class="popover search-popover popover-close">
-								<form class="search" action="https://echo.htmlacademy.ru/" method="post">
+							<div class="popover popover-close">
+								<form class="search-popover" action="https://echo.htmlacademy.ru/" method="post">
 									<label class="visually-hidden" for="find-product">Поиск товара</label>
-									<input class="input" type="search" name="find-product" id="find-product" required autofocus autocomplete="off" placeholder="Поиск по сайту">
-									<button class="delete-button search-reset-button" type="reset">
-										<span class="visually-hidden">Сброс введенноготекста</span>
-									</button>			
-								</form>	
+									<div class="search-input-reset-button-wrapper">
+										<input class="input" type="search" name="find-product" id="find-product" required autofocus autocomplete="off" placeholder="Поиск по сайту">
+										<button class="delete-button search-reset-button" type="reset">
+											<span class="visually-hidden">Сброс введенного текста</span>
+										</button>
+									</div>		
+								</form>			
 							</div>
 						</li>
 						<li class="navigation-item">
@@ -64,6 +93,29 @@
 								</span>
 								<span>Вход</span>
 							</button>
+							
+							<div class="popover popover-close">
+								<form class="auth-user-popover" action="https://echo.htmlacademy.ru/" method="post">
+									<p class="h3">Личный кабинет</p>
+									<label class="visually-hidden" for="auth-user-name">Поле ввода индентификатора пользователя</label>
+									<input class="input" type="email" name="user-name" id="auth-user-name" required autocomplete="off" placeholder="email@example.com">
+
+									<label class="visually-hidden" for="auth-user-password">Поле ввода пароля пользователя</label>
+									<input class="input" type="password" name="user-password" id="auth-user-password" required autocomplete="off" placeholder="Пароль">
+									
+									<div class="button-with-links-wrapper">
+										<button class="button pink-button" type="submit">Войти</button>
+										<ul class="auth-links-list">
+											<li class="auth-links-item">
+												<a class="auth-links-link auth-links-link" href="#">Забыли пароль?</a>
+											</li>
+											<li class="auth-links-item">
+												<a class="auth-links-link" href="#">Регистрация</a>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
 						</li>
 						<li class="navigation-item">
 							<button class="navigation-link" type="button">
