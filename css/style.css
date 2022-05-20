@@ -1362,31 +1362,19 @@ body {
 
 .htmlacademy-link {
   color: inherit;
-  text-decoration: none;
+  text-underline-offset: 2.3px;
+  text-decoration-color: rgba(45, 52, 64, 0.5);
   position: relative;
-}
-
-.htmlacademy-link::before {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: -1px;
-  height: 1px;
-  background-color: var(--extra-dark);
-  content: "";
-  opacity: 0.5;
 }
 
 .htmlacademy-link:hover {
   color: var(--extra-bright);
-}
-
-.htmlacademy-link:hover::before {
-  background-color: var(--extra-bright);
+  text-decoration-color: var(--extra-bright);
 }
 
 .htmlacademy-link:active {
   color: var(--extra-bright);
+  text-decoration-color: var(--extra-bright);
   opacity: 0.6;
 }
 
@@ -1648,6 +1636,7 @@ body {
   display: grid;
   grid-template-columns: auto;
   row-gap: 16px;
+  box-shadow: var(--shadow-big);
 }
 
 .auth-user-popover .h3 {
@@ -1689,10 +1678,17 @@ body {
 .auth-links-link {
   display: inline-block;
   position: relative;
-  font-size: 14px;
-  line-height: 20px;
   text-underline-offset: 3.4px;
   color: inherit;
+}
+
+.auth-links-link:hover {
+  color: var(--extra-bright);
+}
+
+.auth-links-link:active {
+  color: var(--extra-bright);
+  opacity: 0.6;
 }
 
 
