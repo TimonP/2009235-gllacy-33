@@ -1512,6 +1512,21 @@ body {
   display: block;
 }
 
+/*мост*/
+.navigation-link:hover::after {
+  content: "";
+  display: block;
+  height: 9px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100%;
+}
+
+.popover-close:hover {
+  display: block;
+}
+
 .catalog-menu-popover {
   display: flex;
   flex-direction: column;
@@ -1693,7 +1708,21 @@ body {
 
 
 /*Попер корзины*/
+.basket-popover {
+  padding: 48px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-big);
+}
 
+/*пустая корзина*/
+.empty-basket-popover {
+  display: none;
+  width: 288px;
+  padding: 48px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-medium);
+  text-align: center;
+}
 
 /*
 .range-input::-webkit-inner-spin-button,

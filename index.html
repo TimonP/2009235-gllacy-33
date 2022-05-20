@@ -128,7 +128,42 @@
 									</svg>
 								</span>
 								<span>Пусто</span>
+								<span><output name="product-count">2</output> товара</span>
 							</button>
+							<div class="popover popover-clos">
+								<div class="basket-popover">
+									<p class="h3">Корзина</p>
+
+									<ul class="cart-items-list">
+										<li class="cart-item">
+											<img class="cart-item-image" width="46" height="46" src="images/product-1.jpg" alt="Фото товара">
+																													
+											<dl class="characteristic">												
+												<dt>Малинка</dt>
+												<dd>1 кг х 310 ₽</dd>										
+											</dl>
+
+											<b class="price">310 ₽</b>
+
+											<button class="delete-button cart-item-delete-button" type="button">
+												<span class="visually-hidden">Удалить из корзины</span>
+											</button>
+										</li>
+										<li class="cart-item">
+											
+										</li>
+									</ul>
+
+									<div>
+										<button class="button pink-button" type="button">Оформить заказ</button>										
+										<span>Итого: <output name="product-price">790</output> ₽</span>
+									</div>
+								</div>
+
+								<div class="empty-basket-popover">
+									<p class="h3">Ваша корзина пока пуста</p>
+								</div>
+							</div>	
 						</li>
 					</ul>
 				</nav>
