@@ -980,6 +980,7 @@ body {
 .about {
   margin: 80px 0;
   padding: 24px;
+  background-color: var(--extra-light);
   background-image: url("../images/waffle-background.jpg");
   background-size: cover;
   background-position: center;
@@ -1074,6 +1075,7 @@ body {
 .subscription-wrapper {
   padding: 6px;
   border-radius: 16px;
+  background-color: var(--extra-light);
   background-image: url("../images/email-background.jpg");
   background-size: cover;
 }
@@ -1110,6 +1112,7 @@ body {
   border-radius: 16px;
   padding: 64px;
   padding-left: 100px;
+  background-color: var(--extra-light);
   background-image: url("../images/delivery-background.jpg");
   background-size: cover;
   display: flex;
@@ -1197,6 +1200,7 @@ body {
   margin-bottom: 0;
   border-radius: 16px;
   padding: 64px;
+  background-color: var(--extra-light);
   background-image: url("../images/feedback-background.jpg");
   background-size: cover;
 }
