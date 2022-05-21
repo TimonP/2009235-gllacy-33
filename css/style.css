@@ -335,7 +335,8 @@ body {
 .products-list,
 .benefits-list,
 .catalog-menu-popover-list,
-.auth-links-list {
+.auth-links-list,
+.cart-items-list {
   list-style: none;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -442,6 +443,10 @@ body {
 }
 
 .navigation-link-icon + span {
+  margin-left: 6px;
+}
+
+.navigation-link-icon + span + span {
   margin-left: 6px;
 }
 
@@ -1709,9 +1714,99 @@ body {
 
 /*Попер корзины*/
 .basket-popover {
+  display: none;
+  width: max-content;
+  min-width: 441px;
+  max-width: 641px;
   padding: 48px;
   border-radius: 4px;
   box-shadow: var(--shadow-big);
+}
+
+.basket-popover .h3 {
+  margin-bottom: 32px;
+}
+
+.cart-items-list {
+  margin: 32px 0;
+}
+
+.cart-items-list::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 1px;
+  background-color: var(--light);
+  position: relative;
+  right: 0;
+  left: 0;
+  margin-top: 31px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.cart-item-image {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  flex: 0 0 46px;
+  margin-right: 16px;
+}
+
+.characteristic {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-right: auto;
+}
+
+.characteristic dt {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.characteristic dd {
+  padding-top: 4px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--neutral);
+}
+
+.cart-item .price {
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: auto;
+}
+
+.cart-item-delete-button {
+  margin-left: 52px;
+}
+
+.cart-item-delete-button:hover {
+  opacity: 0.7;
+}
+
+.cart-item-delete-button:active {
+  opacity: 0.5;
+}
+
+.final-sum {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.final-sum b {
+  margin-left: 16px;
+  font-size: 18px;
 }
 
 /*пустая корзина*/
@@ -1722,6 +1817,23 @@ body {
   border-radius: 4px;
   box-shadow: var(--shadow-medium);
   text-align: center;
+}
+
+/* пустая/заполненная корзина */
+.products-yes .products-not-added {
+  display: none;
+}
+
+.products-no .products-added {
+  display: none;
+}
+
+.products-yes .basket-popover {
+  display: block;
+}
+
+.products-no .empty-basket-popover {
+  display: block;
 }
 
 /*
