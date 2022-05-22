@@ -337,7 +337,8 @@ body {
 .catalog-menu-popover-list,
 .auth-links-list,
 .cart-items-list,
-.breadcrumbs {
+.breadcrumbs,
+.pagination {
   list-style: none;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -1245,6 +1246,7 @@ body {
 }
 
 /*-------- страница каталога ----------*/
+/*хлебные крошки*/
 .inner-header {
   margin: 32px 0;
 }
@@ -1304,6 +1306,90 @@ body {
 
 .breadcrumbs + .h2 {
   margin-top: 16px;
+}
+
+/*фильтр*/
+
+
+/*продукты*/
+.products-catalog .products-list {
+  margin: 48px 0;
+}
+
+/*пагинация с кнопкой*/
+.pagination-container {
+  margin-top: 57px;
+  margin-bottom: 81px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  float: right;
+}
+
+.pagination-container .button {
+  transform: translateX(-50%);
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination-item {
+  display: block;
+}
+
+.pagination-link {
+  display: block;
+  min-width: 24px;
+  aspect-ratio: 1/1;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  color: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  padding: 1px 6px;
+  text-align: center;
+}
+.pagination-link-current {
+  background-color: var(--extra-light);
+  border: 1px solid var(--extra-light);
+}
+
+.pagination-link:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 1px solid transparent;
+}
+
+.pagination-link:active {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 1px solid var(--extra-light);
+}
+
+.pagination-link:focus {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 1px solid var(--extra-dark);
+}
+
+.pagination-prev {
+  background-image: url("images/arrow-left.svg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.pagination-next {
+  transform: rotate(180deg);
+}
+
+.pagination-link:not([href]),
+.pagination-link:hover:not([href])
+.pagination-link:active::not([href])
+.pagination-link:focus:not([href])
+.pagination-disabled {
+  opacity: 0.2;
 }
 
 /*--------------ФУТЕР----------*/
