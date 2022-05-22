@@ -336,7 +336,8 @@ body {
 .benefits-list,
 .catalog-menu-popover-list,
 .auth-links-list,
-.cart-items-list {
+.cart-items-list,
+.breadcrumbs {
   list-style: none;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -1240,6 +1241,68 @@ body {
 .feedback-window .button {
   margin-top: 32px;
   min-height: 46px;
+}
+
+/*-------- страница каталога ----------*/
+.inner-header {
+  margin: 32px 0;
+}
+
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  margin-right: 28px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  position: absolute;
+  left: calc(100% + 8px);
+  width: 12px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  background-image: url("../images/breadcrumbs.svg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+  text-underline-offset: 3.4px;
+  display: inline-block;
+}
+
+.breadcrumbs-item:last-child .breadcrumbs-link {
+  text-decoration: none;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.7;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.5;
+}
+
+.breadcrumbs + .h2 {
+  margin-top: 16px;
 }
 
 /*--------------ФУТЕР----------*/
