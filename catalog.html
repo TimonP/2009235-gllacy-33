@@ -206,9 +206,125 @@
 				<section class="products-catalog">
 					<h2 class="visually-hidden">Список товаров</h2>
 
-					<div class="">
-						<h3 class="visually-hidden">Фильтр</h3>
-					</div>
+					<form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+						<h3 class="visually-hidden">Фильтр сортировки товаров</h3>
+
+						<fieldset class="catalog-filter-group">
+							<legend class="catalog-filter-title">Сортировка:</legend>
+							<select class="select-control" name="price-sorting">
+								<option value="popular" selected>по популярности</option>
+								<option value="cheap">по возрастанию цены</option>
+								<option value="expensive">по убыванию цены</option>
+							</select>
+						</fieldset>
+
+
+						<fieldset class="catalog-filter-group">
+							<div class="range">
+								<div class="range-wrapper-inputs">
+									<span>
+										<legend class="catalog-filter-title">Цена:</legend>
+										<label>
+											от <input class="range-input" type="number" value="100" name="min-price" style="width: 37px"> ₽
+										</label>
+										<label>
+											до <input class="range-input" type="number" value="500" name="max-price" style="width: 37px"> ₽
+										</label>
+									</span>
+								</div>
+
+								<div class="range-scale-wrapper">	
+									<div class="range-scale">
+										<div class="range-bar" style="left: 42px; width: 136px">
+											<button class="range-toggle toggle-min" type="button">
+												<span class="visually-hidden">Изменить минимальную цену.</span>
+											</button>
+											<button class="range-toggle toggle-max" type="button">
+												<span class="visually-hidden">Изменить максимальную цену.</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset class="catalog-filter-group">
+							<legend class="catalog-filter-title">Жирность:</legend>
+							<ul class="catalog-filter-list">
+								<li class="catalog-filter-item">
+									<label class="control">
+										<input class="visually-hidden control-input" type="radio" name="tank" value="0">
+										<span class="control-mark"></span>
+										<span class="control-label">0%</span>
+									</label>
+								</li>
+								<li class="catalog-filter-item">
+									<label class="control">
+										<input class="visually-hidden control-input" type="radio" name="tank" value="0-10" checked>
+										<span class="control-mark"></span>
+										<span class="control-label">до 10%</span>
+									</label>
+								</li>
+								<li class="catalog-filter-item">
+									<label class="control">
+										<input class="visually-hidden control-input" type="radio" name="tank" value="0-30" checked>
+										<span class="control-mark"></span>
+										<span class="control-label">до 30%</span>
+									</label>
+								</li>
+								<li class="catalog-filter-item">
+									<label class="control">
+										<input class="visually-hidden control-input" type="radio" name="tank" value="30-+oo" checked>
+										<span class="control-mark"></span>
+										<span class="control-label">выше 30%</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+
+						<fieldset class="catalog-filter-group">
+							<legend class="catalog-filter-title">Наполнители:</legend>
+							<ul class="catalog-filter-list">
+								<li class="catalog-filter-item">
+									<label class="control">
+										<input class="visually-hidden control-input" type="checkbox" name="chocolate" checked>
+										<span class="control-mark"></span>
+										<span class="control-label">шоколадные</span>
+									</label>
+								</li>
+								<li class="catalog-filter-item">
+									<label class="control">
+										<input class="visually-hidden control-input" type="checkbox" name="sugar-sprinkles" checked>
+										<span class="control-mark"></span>
+										<span class="control-label">сахарные посыпки</span>
+									</label>
+								</li>
+								<li class="catalog-filter-item">
+									<label class="control">
+										<input class="visually-hidden control-input" type="checkbox" name="fruits">
+										<span class="control-mark"></span>
+										<span class="control-label">фрукты</span>
+									</label>
+								</li>
+								<li class="catalog-filter-item">
+									<label class="control">
+										<input class="visually-hidden control-input" type="checkbox" name="syrups">
+										<span class="control-mark"></span>
+										<span class="control-label">сиропы</span>
+									</label>
+								</li>
+								<li class="catalog-filter-item">
+									<label class="control">
+										<input class="visually-hidden control-input" type="checkbox" name="jams">
+										<span class="control-mark"></span>
+										<span class="control-label">джемы</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+
+						<button class="button form-button" type="submit">Применить</button>
+					</form>
 
 					<ul class="products-list">
 						<li class="products-card">
@@ -408,37 +524,39 @@
 					</ul>
 
 					<div class="pagination-container">
-						<button class="button white-button" type="button">Показать ещё</button>
+						<div class="pagination-wrapper">
+							<button class="button white-button" type="button">Показать ещё</button>
 
-						<ul class="pagination">
-							<li class="pagination-item">
-								<a class="pagination-link pagination-prev pagination-link-disabled" >
-									<span class="visually-hidden">Назад</span>
-								</a>
-							</li>
-							
-							<li class="pagination-item">
-								<a class="pagination-link pagination-link-current" href="#">1</a>
-							</li>
-							<li class="pagination-item">
-								<a class="pagination-link" href="#">2</a>
-							</li>
-							<li class="pagination-item">
-								<a class="pagination-link" href="#">3</a>
-							</li>
-							<li class="pagination-item">
-								<a class="pagination-link" href="#">4</a>
-							</li>
-							<li class="pagination-item">
-								<a class="pagination-link" href="#">5</a>
-							</li>
+							<ul class="pagination">
+								<li class="pagination-item">
+									<a class="pagination-link pagination-prev pagination-link-disabled" >
+										<span class="visually-hidden">Назад</span>
+									</a>
+								</li>
+								
+								<li class="pagination-item">
+									<a class="pagination-link pagination-link-current" href="#">1</a>
+								</li>
+								<li class="pagination-item">
+									<a class="pagination-link" href="#">2</a>
+								</li>
+								<li class="pagination-item">
+									<a class="pagination-link" href="#">3</a>
+								</li>
+								<li class="pagination-item">
+									<a class="pagination-link" href="#">4</a>
+								</li>
+								<li class="pagination-item">
+									<a class="pagination-link" href="#">5</a>
+								</li>
 
-							<li class="pagination-item">
-								<a class="pagination-link pagination-next" href="#">
-									<span class="visually-hidden">Вперёд</span>
-								</a>
-							</li>
-						</ul>
+								<li class="pagination-item">
+									<a class="pagination-link pagination-next" href="#">
+										<span class="visually-hidden">Вперёд</span>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</section>				
 			</main>

@@ -517,9 +517,6 @@ body {
 .slider-pagination {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   margin: -4px;
   align-items: center;
   left: 0;
@@ -1292,7 +1289,27 @@ body {
 }
 
 /*фильтр*/
+.catalog-filter {
+  margin: 40px 0;
+  display: flex;
+}
 
+.catalog-filter-group {
+  margin: 0 24px 16px 0;
+  display: flex;
+}
+
+.catalog-filter-title {
+  display: inline;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 16px;
+  margin-bottom: 8px;
+}
+
+.form-button {
+
+}
 
 /*продукты*/
 .products-catalog .products-list {
@@ -1302,13 +1319,16 @@ body {
 /*пагинация с кнопкой*/
 .pagination-container {
   margin-top: 57px;
-  margin-bottom: 81px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
+}
+
+.pagination-wrapper {
   width: 50%;
+  margin-left: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  float: right;
 }
 
 .pagination-container .button {
