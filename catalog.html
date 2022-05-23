@@ -206,130 +206,127 @@
 				<section class="products-catalog">
 					<h2 class="visually-hidden">Список товаров</h2>
 
-					<form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-						<h3 class="visually-hidden">Фильтр сортировки товаров</h3>
+					<div class="catalog-filter-wrapper">
+						<form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+							<h3 class="visually-hidden">Фильтр сортировки товаров</h3>
 
-						<fieldset class="catalog-filter-group">
-							<legend class="catalog-filter-title">Сортировка:</legend>
-							<select class="select-control" name="price-sorting">
-								<option value="popular" selected>по популярности</option>
-								<option value="cheap">по возрастанию цены</option>
-								<option value="expensive">по убыванию цены</option>
-							</select>
-						</fieldset>
+							<fieldset class="catalog-filter-group">
+								<legend class="catalog-filter-title">Сортировка:</legend>
+								<select class="select-control" name="price-sorting">
+									<option value="popular" selected>по популярности</option>
+									<option value="cheap">по возрастанию цены</option>
+									<option value="expensive">по убыванию цены</option>
+								</select>
+							</fieldset>
 
 
-						<fieldset class="catalog-filter-group">
-							<div class="range">
-								<div class="range-wrapper-inputs">
-									<span>
-										<legend class="catalog-filter-title">Цена:</legend>
-										<label>
-											от <input class="range-input" type="number" value="100" name="min-price" style="width: 37px"> ₽
-										</label>
-										<label>
-											до <input class="range-input" type="number" value="500" name="max-price" style="width: 37px"> ₽
-										</label>
-									</span>
-								</div>
+							<fieldset class="catalog-filter-group">
+								<span class="catalog-filter-title">
+									Цена: 
+									<label class="visually-hidden" for="range-min-price">Минимальная цена</label>
+									<input class="range-input" type="number" value="100" name="min-price" id="range-min-price" style="width: 23px"> ₽ - 
+									<label class="visually-hidden" for="range-max-price">Максимальная цена</label>
+									<input class="range-input" type="number" value="500" name="max-price" id="range-max-price" style="width: 25px"> ₽
+								</span>
 
-								<div class="range-scale-wrapper">	
+								<div class="range">	
 									<div class="range-scale">
-										<div class="range-bar" style="left: 42px; width: 136px">
+										<div class="range-bar" style="left: 32px; width: 72px">
 											<button class="range-toggle toggle-min" type="button">
-												<span class="visually-hidden">Изменить минимальную цену.</span>
+												<span class="visually-hidden">Изменить минимальную цену</span>
 											</button>
 											<button class="range-toggle toggle-max" type="button">
-												<span class="visually-hidden">Изменить максимальную цену.</span>
+												<span class="visually-hidden">Изменить максимальную цену</span>
 											</button>
 										</div>
 									</div>
 								</div>
-							</div>
-						</fieldset>
+								
+							</fieldset>
 
-						<fieldset class="catalog-filter-group">
-							<legend class="catalog-filter-title">Жирность:</legend>
-							<ul class="catalog-filter-list">
-								<li class="catalog-filter-item">
-									<label class="control">
-										<input class="visually-hidden control-input" type="radio" name="tank" value="0">
-										<span class="control-mark"></span>
-										<span class="control-label">0%</span>
-									</label>
-								</li>
-								<li class="catalog-filter-item">
-									<label class="control">
-										<input class="visually-hidden control-input" type="radio" name="tank" value="0-10" checked>
-										<span class="control-mark"></span>
-										<span class="control-label">до 10%</span>
-									</label>
-								</li>
-								<li class="catalog-filter-item">
-									<label class="control">
-										<input class="visually-hidden control-input" type="radio" name="tank" value="0-30" checked>
-										<span class="control-mark"></span>
-										<span class="control-label">до 30%</span>
-									</label>
-								</li>
-								<li class="catalog-filter-item">
-									<label class="control">
-										<input class="visually-hidden control-input" type="radio" name="tank" value="30-+oo" checked>
-										<span class="control-mark"></span>
-										<span class="control-label">выше 30%</span>
-									</label>
-								</li>
-							</ul>
-						</fieldset>
+							<fieldset class="catalog-filter-group">
+								<legend class="catalog-filter-title">Жирность:</legend>
+								<ul class="catalog-filter-list">
+									<li class="catalog-filter-item">
+										<label class="control">
+											<input class="visually-hidden control-input" type="radio" name="tank" value="0">
+											<span class="control-mark"></span>
+											<span class="control-label">0%</span>
+										</label>
+									</li>
+									<li class="catalog-filter-item">
+										<label class="control">
+											<input class="visually-hidden control-input" type="radio" name="tank" value="0-10" checked>
+											<span class="control-mark"></span>
+											<span class="control-label">до 10%</span>
+										</label>
+									</li>
+									<li class="catalog-filter-item">
+										<label class="control">
+											<input class="visually-hidden control-input" type="radio" name="tank" value="0-30" checked>
+											<span class="control-mark"></span>
+											<span class="control-label">до 30%</span>
+										</label>
+									</li>
+									<li class="catalog-filter-item">
+										<label class="control">
+											<input class="visually-hidden control-input" type="radio" name="tank" value="30-+oo" checked>
+											<span class="control-mark"></span>
+											<span class="control-label">выше 30%</span>
+										</label>
+									</li>
+								</ul>
+							</fieldset>
 
-						<fieldset class="catalog-filter-group">
-							<legend class="catalog-filter-title">Наполнители:</legend>
-							<ul class="catalog-filter-list">
-								<li class="catalog-filter-item">
-									<label class="control">
-										<input class="visually-hidden control-input" type="checkbox" name="chocolate" checked>
-										<span class="control-mark"></span>
-										<span class="control-label">шоколадные</span>
-									</label>
-								</li>
-								<li class="catalog-filter-item">
-									<label class="control">
-										<input class="visually-hidden control-input" type="checkbox" name="sugar-sprinkles" checked>
-										<span class="control-mark"></span>
-										<span class="control-label">сахарные посыпки</span>
-									</label>
-								</li>
-								<li class="catalog-filter-item">
-									<label class="control">
-										<input class="visually-hidden control-input" type="checkbox" name="fruits">
-										<span class="control-mark"></span>
-										<span class="control-label">фрукты</span>
-									</label>
-								</li>
-								<li class="catalog-filter-item">
-									<label class="control">
-										<input class="visually-hidden control-input" type="checkbox" name="syrups">
-										<span class="control-mark"></span>
-										<span class="control-label">сиропы</span>
-									</label>
-								</li>
-								<li class="catalog-filter-item">
-									<label class="control">
-										<input class="visually-hidden control-input" type="checkbox" name="jams">
-										<span class="control-mark"></span>
-										<span class="control-label">джемы</span>
-									</label>
-								</li>
-							</ul>
-						</fieldset>
+							<fieldset class="catalog-filter-group">
+								<legend class="catalog-filter-title">Наполнители:</legend>
+								<ul class="catalog-filter-list">
+									<li class="catalog-filter-item">
+										<label class="control">
+											<input class="visually-hidden control-input" type="checkbox" name="chocolate" checked>
+											<span class="control-mark"></span>
+											<span class="control-label">шоколадные</span>
+										</label>
+									</li>
+									<li class="catalog-filter-item">
+										<label class="control">
+											<input class="visually-hidden control-input" type="checkbox" name="sugar-sprinkles" checked>
+											<span class="control-mark"></span>
+											<span class="control-label">сахарные посыпки</span>
+										</label>
+									</li>
+									<li class="catalog-filter-item">
+										<label class="control">
+											<input class="visually-hidden control-input" type="checkbox" name="fruits">
+											<span class="control-mark"></span>
+											<span class="control-label">фрукты</span>
+										</label>
+									</li>
+									<li class="catalog-filter-item">
+										<label class="control">
+											<input class="visually-hidden control-input" type="checkbox" name="syrups">
+											<span class="control-mark"></span>
+											<span class="control-label">сиропы</span>
+										</label>
+									</li>
+									<li class="catalog-filter-item">
+										<label class="control">
+											<input class="visually-hidden control-input" type="checkbox" name="jams">
+											<span class="control-mark"></span>
+											<span class="control-label">джемы</span>
+										</label>
+									</li>
+								</ul>
+							</fieldset>
 
-						<button class="button form-button" type="submit">Применить</button>
-					</form>
+							<button class="button form-button" type="submit">Применить</button>
+						</form>
+					</div>
 
 					<ul class="products-list">
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-1.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-1.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Малинка</h3>
 							<p class="p">Сливочное мороженое с&nbsp;малиновым джемом</p>
@@ -345,7 +342,7 @@
 						</li>
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-2.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-2.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Фисташка</h3>
 							<p class="p">Фисташковый пломбир с&nbsp;кусочками шоколада</p>
@@ -361,7 +358,7 @@
 						</li>
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-3.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-3.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Черника</h3>
 							<p class="p">Крем-брюле с&nbsp;черничным джемом</p>
@@ -377,7 +374,7 @@
 						</li>
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-4.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-4.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Бабл-гам</h3>
 							<p class="p">Ванильный пломбир со&nbsp;сладкой посыпкой</p>
@@ -394,7 +391,7 @@
 
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-5.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-5.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Ежевика</h3>
 							<p class="p">Сливочное мороженое с&nbsp;ежевичным джемом</p>
@@ -410,7 +407,7 @@
 						</li>
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-6.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-6.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Банан</h3>
 							<p class="p">Сливочный пломбир с&nbsp;банановым вкусом</p>
@@ -426,7 +423,7 @@
 						</li>
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-7.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-7.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Шоколадка</h3>
 							<p class="p">Классический шоколадный пломбир</p>
@@ -442,7 +439,7 @@
 						</li>
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-8.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-8.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Клубничка</h3>
 							<p class="p">Сливочный пломбир с&nbsp;клубничным вкусом</p>
@@ -459,7 +456,7 @@
 
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-9.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-9.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Лимон</h3>
 							<p class="p">Освежающий лимонный сорбет</p>
@@ -475,7 +472,7 @@
 						</li>
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-10.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-10.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Ментол</h3>
 							<p class="p">Сливочный пломбир с&nbsp;ментоловым сиропом</p>
@@ -491,7 +488,7 @@
 						</li>
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-11.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-11.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Орешек</h3>
 							<p class="p">Фисташковый пломбир с&nbsp;шоколадным сиропом</p>
@@ -507,7 +504,7 @@
 						</li>
 						<li class="products-card">
 							<div class="products-card-img">
-								<img class="product-card-image" width="168" height="168" src="images/product-12.png">
+								<img class="product-card-image" width="168" height="168" src="images/product-12.png" alt="Фото продукта">
 							</div>
 							<h3 class="h4">Крем-брюле</h3>
 							<p class="p">Классическое крем&#8209;брюле</p>
