@@ -1570,7 +1570,7 @@ a.form-button:not([href]) {
 
 .control-input:focus + .control-mark {
   outline: none;
-  background-color: rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.3);
 }
 
 .control-input:disabled + .control-mark {
