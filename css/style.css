@@ -1916,7 +1916,11 @@ a.form-button:not([href]) {
 
 /*----ПОПОВЕРЫ----*/
 .popover-close {
-  display: none;
+  /*display: none;*/
+  transform: scaleY(0);
+  transform-origin :0 0;
+  transition: transform 0.4s ease-out;
+  visibility: hidden;
 }
 
 .popover {
@@ -1953,7 +1957,9 @@ a.form-button:not([href]) {
 
 /*Всплывающее меню какталога*/
 .navigation-main-menu .navigation-link:hover + .popover-close {
-  display: block;
+  /*display: block;*/
+  transform: scaleY(1);
+  visibility: visible;
 }
 
 /*мост*/
@@ -1968,7 +1974,9 @@ a.form-button:not([href]) {
 }
 
 .popover-close:hover {
-  display: block;
+  /*display: block;*/
+  transform: scaleY(1);
+  visibility: visible;
 }
 
 .catalog-menu-popover {
