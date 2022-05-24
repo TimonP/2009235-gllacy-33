@@ -472,8 +472,16 @@ a.form-button:not([href]) {
   fill: var(--extra-dark);
 }
 
-.navigation-link  svg + svg {
+.products-no .navigation-link svg + svg {
   display: none;
+}
+
+.products-yes .navigation-link svg {
+  display: none;
+}
+
+.products-yes .navigation-link svg + svg {
+  display: block;
 }
 
 .navigation-user-menu .navigation-link {
@@ -503,10 +511,6 @@ a.form-button:not([href]) {
 .navigation-link:active {
   background-color: var(--extra-light);
   color: var(--extra-dark);
-}
-
-.navigation-link:focus  svg + svg {
-  display: block;
 }
 
 /*-----------МЕЙН Главной стр---------*/
