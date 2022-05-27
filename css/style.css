@@ -23,16 +23,14 @@
 }
 
 /*бордер бокс на всю страницу*/
-*, ::after, ::before {
-box-sizing: inherit;
-} 
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
 
 html {
   box-sizing: border-box;
-}
-
-.class {
-  box-sizing: content-box;
 }
 
 :root {
@@ -54,9 +52,9 @@ html {
   --warning: #fd912e;
   --success: #00e484;
   /*Тени*/
-  --shadow-small: 0px 4px 12px rgba(45, 52, 64, 0.1);
-  --shadow-medium: 0px 8px 16px rgba(45, 52, 64, 0.12);
-  --shadow-big: 0px 15px 40px rgba(45, 52, 64, 0.12);
+  --shadow-small: 0 4px 12px rgba(45, 52, 64, 0.1);
+  --shadow-medium: 0 8px 16px rgba(45, 52, 64, 0.12);
+  --shadow-big: 0 15px 40px rgba(45, 52, 64, 0.12);
 }
 
 body {
@@ -202,7 +200,7 @@ body {
   box-shadow: 0 0 0 2px var(--extra-dark), var(--shadow-small);
 }
 
-.white-button:focus{
+.white-button:focus {
   box-shadow: 0 0 0 2px var(--extra-dark), var(--shadow-small);
 }
 
@@ -233,7 +231,7 @@ a.white-button:not([href]) {
   box-shadow: 0 0 0 2px var(--extra-dark), var(--shadow-small);
 }
 
-.pink-button:focus{
+.pink-button:focus {
   box-shadow: 0 0 0 2px var(--extra-dark), var(--shadow-small);
 }
 
@@ -326,7 +324,7 @@ a.form-button:not([href]) {
   cursor: default;
 }
 
-.input::placeholder {
+.input:disabled::placeholder {
   color: var(--extra-dark);
   opacity: 0.65;
 }
@@ -367,7 +365,7 @@ a.form-button:not([href]) {
 .navigation-link-icon svg,
 .slider-button svg,
 .basket svg,
-.close-window svg  {
+.close-window svg {
   position: absolute;
   top: 0;
   right: 0;
@@ -381,7 +379,7 @@ a.form-button:not([href]) {
   display: block;
 }
 
-.logo:hover  {
+.logo:hover {
   opacity: 0.7;
 }
 
@@ -394,7 +392,6 @@ a.form-button:not([href]) {
   flex-wrap: wrap;
   margin: 24px 0;
 }
-
 
 .navigation-main-menu {
   margin: 10px 16px;
@@ -556,7 +553,7 @@ a.form-button:not([href]) {
   margin: -4px;
   align-items: center;
   left: 0;
-  bottom: 0px;
+  bottom: 0;
 }
 
 .slider-pagination-item {
@@ -641,7 +638,7 @@ a.form-button:not([href]) {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   color: var(--extra-light);
-  background-color:  rgba(252, 252, 252, 0.3);
+  background-color: rgba(252, 252, 252, 0.3);
   border: 2px solid var(--extra-light);
   cursor: pointer;
   padding: 0;
@@ -691,9 +688,8 @@ a.form-button:not([href]) {
 .slider-button:hover:disabled,
 .slider-button:focus:disabled,
 .slider-button:active:disabled {
-  background-color:  rgba(252, 252, 252, 0.3);
+  background-color: rgba(252, 252, 252, 0.3);
   border: 2px solid var(--extra-light);
-  cursor: default;
   opacity: 0.4;
   cursor: default;
 }
@@ -891,7 +887,7 @@ a.form-button:not([href]) {
 }
 
 .products-card {
-  display:  flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -1056,11 +1052,11 @@ a.form-button:not([href]) {
 
 .benefits-item.thermometer::before {
   background-image: url("../images/benefits-thermometer.svg");
-  background-position: center left 60%
+  background-position: center left 60%;
 }
 
 /* ссылка и подписка на рассылку*/
-.bonus-prises {
+.bonus-prises-two {
   margin: 80px 0;
   margin-bottom: 76px;
 }
@@ -1749,6 +1745,7 @@ a.form-button:not([href]) {
 .footer-navigation {
   display: flex;
 }
+
 .footer-navigation-list {
   padding-left: 24px;
 }
@@ -1891,7 +1888,7 @@ a.form-button:not([href]) {
 }
 
 .close-window svg {
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 .close-window:hover {
@@ -1935,7 +1932,7 @@ a.form-button:not([href]) {
 .popover-close {
   /*display: none;*/
   transform: scaleY(0);
-  transform-origin :0 0;
+  transform-origin: 0 0;
   transition: transform 0.4s ease-out;
   visibility: hidden;
 }
@@ -2055,10 +2052,12 @@ a.form-button:not([href]) {
 .catalog-menu-popover-link-current::before {
   background-color: var(--bright);
 }
+
 .catalog-menu-popover-link:hover,
-.catalog-menu-popover-link:active{
+.catalog-menu-popover-link:active {
   color: inherit;
 }
+
 .catalog-menu-popover-link:hover::before {
   background-color: var(--pink-extra-light);
   z-index: 1;
@@ -2198,7 +2197,6 @@ a.form-button:not([href]) {
 .cart-items-list::after {
   content: "";
   display: block;
-  position: relative;
   height: 1px;
   background-color: var(--light);
   position: relative;
