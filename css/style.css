@@ -949,6 +949,7 @@ a.form-button:not([href]) {
   background-color: var(--extra-bright);
   box-shadow: none;
   position: relative;
+  flex-shrink: 0;
 }
 
 .basket svg {
@@ -1118,6 +1119,7 @@ a.form-button:not([href]) {
   flex: 1;
   flex-shrink: 1;
   width: 100%;
+  align-self: stretch;
 }
 
 /*---Доставка---*/
@@ -1155,6 +1157,7 @@ a.form-button:not([href]) {
   column-gap: 16px;
   row-gap: 20px;
   box-shadow: var(--shadow-big);
+  align-items: end;
 }
 
 .delivery-form .p {
