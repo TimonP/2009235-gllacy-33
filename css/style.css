@@ -509,6 +509,10 @@ a.form-button:not([href]) {
   color: var(--extra-dark);
 }
 
+.enter {
+  margin-right: 4px;
+}
+
 /*-----------МЕЙН Главной стр---------*/
 .page-main {
   flex-grow: 1;
@@ -516,14 +520,19 @@ a.form-button:not([href]) {
 
 /*Слайдер*/
 .slider {
-  margin: 24px 0;
+  margin: 0;
+  margin-bottom: 24px;
   display: grid;
-  grid-template-columns: 470px auto;
+  grid-template-columns: 540px auto;
   gap: 2px;
-  padding: 21px 0 26px 70px;
+  padding: 21px 0 26px 0;
 }
 
 /*----левая часть слайдера ----*/
+.slider-info-wrapper-list {
+  padding-left: 70px;
+}
+
 .slider-info-wrapper-item {
   display: none;
 }
@@ -615,6 +624,7 @@ a.form-button:not([href]) {
   opacity: 0.4;
   flex-basis: 100px;
   margin-left: 41px;
+  transform: translateY(2px);
 }
 
 .slider-controls-item:first-child {
@@ -825,7 +835,7 @@ a.form-button:not([href]) {
 
 /*-------Бонусы---------*/
 .bonus-prises {
-  margin: 80px 0;
+  margin: 54px 0;
 }
 
 .bonus-prises .h2 {
@@ -921,7 +931,7 @@ a.form-button:not([href]) {
 }
 
 .products-card .p {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .price-and-basket {
@@ -1053,7 +1063,7 @@ a.form-button:not([href]) {
 
 .benefits-item.thermometer::before {
   background-image: url("../images/benefits-thermometer.svg");
-  background-position: center left 60%;
+  background-position: center left 58%;
 }
 
 /* ссылка и подписка на рассылку*/
@@ -1140,6 +1150,7 @@ a.form-button:not([href]) {
 .delivery .delivery-info {
   flex-basis: 371px;
   margin-right: 30px;
+  margin-top: 5px;
 }
 
 .delivery .h2 {
@@ -1191,7 +1202,7 @@ a.form-button:not([href]) {
 .tooltip {
   position: absolute;
   display: inline-block;
-  bottom: 2px;
+  bottom: 3px;
   right: 0;
 }
 
@@ -1227,6 +1238,7 @@ a.form-button:not([href]) {
   width: fit-content;
   max-width: 50%;
   padding: 40px;
+  padding-right: 42px;
   background-color: var(--extra-light);
   border-radius: 8px;
   box-shadow: var(--shadow-medium);
@@ -1483,11 +1495,11 @@ a.form-button:not([href]) {
 .control {
   position: relative;
   display: block;
-  padding-left: 40px;
+  padding-left: 41px;
 }
 
 .control.fruits {
-  margin-left: 8px;
+  margin-left: 7px;
 }
 
 .catalog-filter .form-button {
@@ -1630,6 +1642,10 @@ a.form-button:not([href]) {
   margin: 9px 0;
 }
 
+.pagination-item:not(:last-child, :first-child) {
+  margin: 9px 1px;
+}
+
 .pagination-link {
   display: block;
   min-width: 24px;
@@ -1747,6 +1763,9 @@ a.form-button:not([href]) {
 /*навигация футера*/
 .footer-navigation {
   display: flex;
+  justify-content: flex-end;
+  flex-basis: 451px;
+  flex-shrink: 1;
 }
 
 .footer-navigation-list {
@@ -1915,7 +1934,7 @@ a.form-button:not([href]) {
 }
 
 .modal-form .button {
-  margin-top: 32px;
+  margin-top: 17px;
   margin-right: -2px;
   justify-self: end;
 }
@@ -2271,6 +2290,7 @@ a.form-button:not([href]) {
 
 .final-sum b {
   margin-left: 16px;
+  margin-right: 2px;
   font-size: 18px;
 }
 
