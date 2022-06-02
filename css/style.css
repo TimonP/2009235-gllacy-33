@@ -299,7 +299,7 @@ a.form-button:not([href]) {
 }
 
 .pink-button .spinner {
-  color: #fcfcfc;
+  color: var(--extra-light);
 }
 
 .white-button .spinner {
