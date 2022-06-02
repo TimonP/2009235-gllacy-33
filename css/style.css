@@ -364,7 +364,8 @@ a.form-button:not([href]) {
   border: 2px solid var(--error);
 }
 
-.input:disabled {
+.input:disabled,
+.input:read-only {
   padding: 13px 15px;
   background-color: var(--light);
   border: 1px solid var(--neutral);
