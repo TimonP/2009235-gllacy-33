@@ -522,7 +522,13 @@
 
 					<div class="pagination-container">
 						<div class="pagination-wrapper">
-							<button class="button white-button" type="button">Показать ещё</button>
+							<!--Для добавления спинера кнопке необходимо добавить класс whith-spinner-->
+							<button class="button white-button" type="button">Показать ещё
+								<svg class="spinner" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<circle cx="50%" cy="50%" r="7" stroke="currentColor" class="spinner__circle1"/>
+									<circle cx="50%" cy="50%" r="7" stroke="currentColor" class="spinner__circle2"/>
+								</svg>
+							</button>
 
 							<ul class="pagination">
 								<li class="pagination-item">

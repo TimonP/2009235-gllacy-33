@@ -413,7 +413,13 @@
 								<form  class="email" action="https://echo.htmlacademy.ru/" method="post">
 									<label class="visually-hidden" for="newsletter-email">Email</label>
 									<input class="input" type="email" name="newsletter-email" id="newsletter-email" placeholder="email@example.com" required autocomplete="on">
-									<button class="button pink-button" type="submit">Отправить</button>
+									<!--Для добавления спинера кнопке необходимо добавить класс whith-spinner-->
+									<button class="button pink-button" type="submit">Отправить
+										<svg class="spinner" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none">
+											<circle cx="50%" cy="50%" r="7" stroke="currentColor" class="spinner__circle1"/>
+											<circle cx="50%" cy="50%" r="7" stroke="currentColor" class="spinner__circle2"/>
+										</svg>
+									</button>
 								</form>
 							</div>
 						</div>
@@ -461,7 +467,12 @@
 							<input class="input" type="text" id="delivery-address" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
 						</div>
 
-						<button class="button pink-button" type="submit">Отправить</button>
+						<button class="button pink-button" type="submit">Отправить
+							<svg class="spinner" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<circle cx="50%" cy="50%" r="7" stroke="currentColor" class="spinner__circle1"/>
+								<circle cx="50%" cy="50%" r="7" stroke="currentColor" class="spinner__circle2"/>
+							</svg>
+						</button>
 					</form>
 				</section>
 
@@ -566,7 +577,12 @@
 						<label class="visually-hidden" for="user-message">Что нужно привезти:</label>
 						<textarea class="input" rows="6" id="user-message" name="message" placeholder="В свободной форме" autocomplete="off" required></textarea>
 						
-						<button class="button pink-button" type="submit">Отправить</button>
+						<button class="button pink-button" type="submit">Отправить
+							<svg class="spinner" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<circle cx="50%" cy="50%" r="7" stroke="currentColor" class="spinner__circle1"/>
+								<circle cx="50%" cy="50%" r="7" stroke="currentColor" class="spinner__circle2"/>
+							</svg>
+						</button>
 					</form>
 				</div>
 			</div>
