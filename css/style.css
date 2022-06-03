@@ -70,7 +70,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
-  min-width: 1366px;
+  /*min-width: 1366px;*/
   background-color: var(--pink-light);
   transition: background-color 0.6s;
 }
@@ -358,6 +358,10 @@ a.form-button:not([href]) {
   padding: 13px 15px;
 }
 
+.input:focus::placeholder {
+  opacity: 0;
+}
+
 .input:hover:invalid,
 .input:hover.error {
   padding: 12px 14px;
@@ -411,7 +415,6 @@ a.form-button:not([href]) {
 
 /*Центровкка SVG*/
 .social-item-link svg,
-.navigation-link-icon svg,
 .slider-button svg,
 .basket svg,
 .close-window svg {
@@ -447,6 +450,8 @@ a.form-button:not([href]) {
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
+  max-width: 468px;
 }
 
 .navigation-item {
@@ -477,32 +482,31 @@ a.form-button:not([href]) {
 }
 
 .navigation address {
-  margin-right: 12px;
-  display: grid;
-  align-items: center;
+  margin: 12px;
+  padding: 6px;
 }
 
 .navigation .contact-phone {
   font-size: 16px;
   line-height: 20px;
-  padding: 6px;
 }
 
 .navigation-user-menu {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -8px;
+  align-content: flex-start;
+  justify-content: flex-end;
+  margin: 4px -8px;
+  max-width: 351px;
 }
 
 .navigation-user-menu .navigation-item {
-  margin: 12px 8px;
+  margin: 8px;
 }
 
 .navigation-link-icon {
   min-width: 18px;
-  min-height: 18px;
-  display: inline-block;
-  position: relative;
+  fill: var(--extra-dark);
 }
 
 .navigation-link-icon + span {
@@ -511,10 +515,6 @@ a.form-button:not([href]) {
 
 .navigation-link-icon + span + span {
   margin-left: 6px;
-}
-
-.navigation-link-icon svg {
-  fill: var(--extra-dark);
 }
 
 .products-no .navigation-link svg + svg {
@@ -535,6 +535,7 @@ a.form-button:not([href]) {
   background-color: rgba(252, 252, 252, 0.3);
   display: flex;
   align-items: center;
+  min-height: 32px;
 }
 
 .navigation-user-menu .navigation-link[aria-label] {
@@ -774,6 +775,7 @@ a.form-button:not([href]) {
   object-position: center;
   width: 100%;
   height: auto;
+  user-select: none;
 }
 
 /*.slider-images li:not(:first-child) {
@@ -903,6 +905,8 @@ a.form-button:not([href]) {
   padding-right: 209px;
   border-radius: 16px;
   background-color: var(--pink-neutral);
+  display: flex;
+  flex-direction: column;
 }
 
 .bonus-prises-item .h3 {
@@ -912,6 +916,10 @@ a.form-button:not([href]) {
 .bonus-prises-item .p {
   color: var(--extra-dark);
   margin-bottom: 32px;
+}
+
+.bonus-prises-item .button {
+  margin-top: auto;
 }
 
 .gift-raspberry {
@@ -1123,7 +1131,7 @@ a.form-button:not([href]) {
 
 .bonus-prises-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(475px, 1fr));
   gap: 30px;
 }
 
