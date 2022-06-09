@@ -1,7 +1,6 @@
-# Личный проект «{{projectTitle}}»
+# Личный проект «gllacy»
 
-* Студент: [{{userName}}]({{userProfile}}).
-* Наставник: `Неизвестно`.
+https://timonp.github.io/2009235-gllacy-33/
 
 ---
 
